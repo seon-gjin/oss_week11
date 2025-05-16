@@ -10,7 +10,7 @@ def main(stdscr):
 
     height, width = stdscr.getmaxyx()
     x = width // 2
-    y = height // 2
+   y = height // 2
 
     while True:
         stdscr.clear()
@@ -24,7 +24,11 @@ def main(stdscr):
         if key == curses.KEY_UP and y > 0:
             y -= 1
         elif key == curses.KEY_DOWN and y < height - 1:
-            y += 1    
+            y += 1
+        elif key == curses.KEY_LEFT and x > 0:
+            x -= 1
+        elif key == curses.KEY_RIGHT and x < width -1:
+            x += 1
         elif key == ord('q'):
             break
 
